@@ -44,3 +44,9 @@ sudo systemctl start chrony && sudo systemctl enable chrony;
 sudo timedatectl set-timezone "Europe/Moscow";
 echo "Date was succsessfully changed\nNow is $( date )";
 ```
+
+C++ compile
+
+```sh
+sudo apt-get install gcc cmake build-essential -y;
+```
