@@ -6,7 +6,7 @@ Bundle
 
 ```sh
 sudo apt-get update && sudo apt-get upgrade -y;
-sudo apt-get install tree curl wget nmap git python3 python sed vim nano;
+sudo apt-get install tree curl wget nmap git python3 python sed vim nano net-tools;
 sudo apt-get install openssh-server ssh;
 sudo apt-get install zsh -y && sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)";
 sed -i 's/ZSH_THEME=.*/ZSH_THEME="flazz"/' ~/.zshrc;
@@ -21,7 +21,7 @@ Basic Packets
 
 ```sh
 sudo apt-get update && sudo apt-get upgrade -y;
-sudo apt-get install tree curl wget nmap git python3 python sed vim nano;
+sudo apt-get install tree curl wget nmap git python3 python sed vim nano net-tools;
 ```
 
 Install and configure SSH
