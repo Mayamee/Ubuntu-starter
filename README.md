@@ -11,6 +11,7 @@ Deploy and Configure Ubuntu-Server
   - [Time sync](#time-sync-packet)
   - [C++ compiler and make](#cpp-compiler-gcc)
   - [Build TelegramAPIServer](#build-api-telegram-server)
+  - [Install Elastic Search](#install-elastic-search)
 
 <a id="basic-packets"></a>
 Basic Packets
@@ -67,4 +68,18 @@ cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX:PATH=.. .. &&
 cmake --build . --target install &&
 cd ../.. &&
 ls -l telegram-bot-api/bin/telegram-bot-api*
+```
+
+<a id="install-elastic-search"></a>
+Install Elastic Search
+
+```sh
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add - && \
+sudo apt-get install apt-transport-https && \
+echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee /etc/apt/sources.list.d/elastic-7.x.list && \
+sudo apt-get update && sudo apt-get install elasticsearch -y;
+sudo /bin/systemctl daemon-reload && \
+sudo /bin/systemctl enable elasticsearch.service && \
+sudo systemctl restart elasticsearch.service && \
+sudo systemctl status elasticsearch.service
 ```
