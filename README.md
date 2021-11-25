@@ -88,5 +88,5 @@ Add 0.0.0.0 listen to elasticsearch
 
 ```sh
 echo -e "discovery.seed_hosts: [\"127.0.0.1\", \"[::1]\"]\nnetwork.host: 0.0.0.0" \
->> /etc/elasticsearch/elasticsearch.yml
+>> /etc/elasticsearch/elasticsearch.yml && sudo systemctl restart elasticsearch
 ```
