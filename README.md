@@ -83,3 +83,10 @@ sudo /bin/systemctl enable elasticsearch.service && \
 sudo systemctl restart elasticsearch.service && \
 sudo systemctl status elasticsearch.service
 ```
+
+Add 0.0.0.0 listen to elasticsearch
+
+```sh
+echo -e "discovery.seed_hosts: [\"127.0.0.1\", \"[::1]\"]\nnetwork.host: 0.0.0.0" \
+>> /etc/elasticsearch/elasticsearch.yml
+```
