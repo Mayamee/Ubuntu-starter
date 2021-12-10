@@ -6,6 +6,7 @@ Deploy and Configure Ubuntu-Server
 
 - [Table of Contents](#table-of-contents)
   - [Basic Packets](#basic-packets)
+  - [Install Openvpn](#install-openvpn)
   - [Install and configure SSH](#install-ssh)
   - [Install zsh](#install-zsh)
   - [Time sync](#time-sync-packet)
@@ -19,6 +20,15 @@ Basic Packets
 ```sh
 sudo apt-get update && sudo apt-get upgrade -y &&
 sudo apt-get install tree curl wget nmap git python3 python sed vim nano net-tools -y;
+```
+
+<a id="install-openvpn"></a>
+Install Openvpn Server
+
+More info: https://github.com/Nyr/openvpn-install
+
+```sh
+wget https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh
 ```
 
 <a id="install-ssh"></a>
