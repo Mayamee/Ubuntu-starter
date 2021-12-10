@@ -31,6 +31,12 @@ More info: https://github.com/Nyr/openvpn-install
 wget https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh
 ```
 
+Install the client openvpn:
+
+```sh
+sudo apt-get install openvpn
+```
+
 Demonize the client:
 
 STEP 1:
