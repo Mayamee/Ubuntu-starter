@@ -33,10 +33,22 @@ wget https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh
 
 Demonize the client:
 
+STEP 1:
+
 ```sh
-mv -v YOUR_OVPN_FILE.ovpn /etc/openvpn/client/YOUR_OVPN_FILE.conf &&
-sudo systemctl restart openvpn-client@YOUR_OVPN_FILE &&
-sudo systemctl enable openvpn-client@YOUR_OVPN_FILE
+export OVPN_CLIENT_NAME=YOUR_OVPN_FILE
+```
+
+```sh
+OVPN_CLIENT_NAME=$(echo $OVPN_CLIENT_NAME | awk -F. '{print $1}')
+```
+
+STEP 2:
+
+```sh
+mv -v ${OVPN_CLIENT_NAME}.ovpn /etc/openvpn/client/${OVPN_CLIENT_NAME}.conf &&
+sudo systemctl restart openvpn-client@${OVPN_CLIENT_NAME} &&
+sudo systemctl enable openvpn-client@${OVPN_CLIENT_NAME}
 ```
 
 <a id="install-ssh"></a>
