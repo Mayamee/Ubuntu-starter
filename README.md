@@ -19,7 +19,7 @@ Basic Packets
 
 ```sh
 sudo apt-get update && sudo apt-get upgrade -y &&
-sudo apt-get install lnav tree curl wget nmap git python3 python sed vim nano net-tools -y;
+sudo apt-get install tmux lnav tree curl wget nmap git python3 python sed vim nano net-tools -y
 ```
 
 <a id="install-openvpn"></a>
