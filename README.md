@@ -76,10 +76,11 @@ sed -i 's/ZSH_THEME=.*/ZSH_THEME="flazz"/' ~/.zshrc;
 Time sync
 
 ```sh
-sudo apt-get install chrony -y;
-sudo systemctl start chrony && sudo systemctl enable chrony;
-sudo timedatectl set-timezone "Europe/Moscow";
-echo "Date was succsessfully changed\nNow is $( date )";
+sudo apt-get install chrony -y &&
+sudo systemctl start chrony &&
+sudo systemctl enable chrony &&
+sudo timedatectl set-timezone "Europe/Moscow" &&
+echo "Date was succsessfully changed\nNow is $( date )"
 ```
 
 <a id="cpp-compiler-gcc"></a>
